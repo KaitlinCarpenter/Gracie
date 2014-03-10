@@ -7,11 +7,36 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+    <div class="site-wrapper layout">
 
-	<%= link_to "Home", root_path %>
-	<%= link_to "About", about_path %>
+      <div class="site-wrapper-inner">
 
-<%= yield %>
+        <div class="cover-container">
+
+          <div class="masthead clearfix">
+            <div class="inner">
+              <h3 class="masthead-brand">Gracie</h3>
+              <ul class="nav masthead-nav">
+                <li class="active"><%= link_to "Home", root_path %></li>
+                <li><%= link_to "About", about_path %></li>
+                <li><a href="#">Other</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <%= yield %>
+
+          <div class="mastfoot">
+            <div class="inner">
+              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
 
 </body>
 </html>
