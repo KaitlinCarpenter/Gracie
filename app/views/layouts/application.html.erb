@@ -24,11 +24,16 @@
             </div>
           </div>
 
+
+          <% flash.each do |name, msg| %>
+          	<%= content_tag(:div, msg, class: "alert alert-info") %>
+          <% end %>          
+
           <%= yield %>
 
           <div class="mastfoot">
             <div class="inner">
-              <p>Cover template for <a href="http://getbootstrap.com">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+              <p>Created by <a href="https://twitter.com/suchthekaitlin">@suchthekaitlin</a>.</p>
             </div>
           </div>
 
