@@ -3,7 +3,7 @@
             <p class="lead">This is Dobby. He probably looks guilty because he recently tried to sneak into the refrigerator.</p>
           <% if user_signed_in? %>
             <p class="lead">
-            <%= link_to "Get Started!", "#", class: "btn btn-lg btn-default" %>
+            <%= link_to "Get Started!", about_path, class: "btn btn-lg btn-default" %>
             </p>
           <% else %>
             <p class="lead">
