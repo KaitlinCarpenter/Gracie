@@ -1,0 +1,33 @@
+<div class="word-counter">
+  <div class="row">
+    <div class="col-sm-6">
+      <h1>Word Counter</h1>
+    </div>
+    <div class="col-sm-6">
+      <h1 class="count-label"></h1>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-12">
+      <textarea rows="20"></textarea>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  
+  $(document).ready(function() {
+    function countWordsInTextarea() {
+      var text = $("textarea").val();
+      text = text.replace(/(^\s*)|(\s*$)/gi,"");
+      text = text.replace(/[ ]{2,}/gi," ");
+      text = text.replace(/\n /,"\n");
+      return text.split(' ').length;
+    };
+
+    $("textarea").on('input propertychange', function(){
+      $(".count-label").html(countWordsInTextarea()); 
+    }); 
+  });
+</script>
